@@ -8,6 +8,7 @@ const Budget = () => {
     const {budget } = useContext(AppContext);
     const {dispatch} = useContext(AppContext);
     const {expenses} = useContext(AppContext);
+    const {currency} = useContext(AppContext);
 
 
     const setBudget = (value) => {
@@ -33,7 +34,7 @@ const Budget = () => {
     
     return (
         <div className='alert alert-secondary'>
-            <span>Budget: £ </span>
+            <span>Budget: {currency} </span>
             
             <input
                         required='required'
